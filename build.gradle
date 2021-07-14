@@ -34,7 +34,9 @@ jar {
     manifest {
         attributes(
                 'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
-                'Main-Class': 'Application'
+                'Main-Class': 'ApplicationKt'
         )
     }
+
+    from { configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
 }
