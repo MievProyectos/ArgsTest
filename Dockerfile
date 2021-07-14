@@ -1,7 +1,6 @@
 FROM openjdk:8-jdk
 RUN mkdir /app
-COPY . /app/
-WORKDIR /app/
-RUN ./gradlew installDist
-WORKDIR /app/build/install/miev-api/bin
-CMD ["./miev-api"]
+COPY ./build/install/ArgsTest/ /app/
+ENTRYPOINT ["java","-jar","/app/lib/ArgsTest-1.0.jar"]
+WORKDIR /app/bin
+CMD ["./ArgsTest"]
