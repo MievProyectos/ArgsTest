@@ -71,7 +71,7 @@ set CLASSPATH=%APP_HOME%\lib\ArgsTest-1.0.jar;%APP_HOME%\lib\kotlin-stdlib-1.5.1
 
 
 @rem Execute ArgsTest
-"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %ARGS_TEST_OPTS%  -classpath "%CLASSPATH%"  %*
+"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %ARGS_TEST_OPTS%  -classpath "%CLASSPATH%" ApplicationKt %*
 
 :end
 @rem End local scope for the variables with windows NT shell

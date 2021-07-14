@@ -13,6 +13,14 @@ apply plugin: 'application'
 group 'org.example'
 version '1.0'
 
+application {
+    mainClass = 'ApplicationKt'
+}
+
+sourceSets {
+    main.kotlin.srcDirs = main.java.srcDirs = ['src']
+}
+
 repositories {
     mavenLocal()
     mavenCentral()
